@@ -16,7 +16,7 @@
 
 -[Next Steps](#next-steps)
 
-## Project Oeverview
+## Project Overview
 
 ### Why Pricing Strategy is Crucial for Chassis Parts in a Competitive Market
 
