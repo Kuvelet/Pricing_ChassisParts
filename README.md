@@ -18,7 +18,7 @@
 
 ## Project Overview
 
-### Why Pricing Strategy is Crucial for Chassis Parts in a Competitive Market
+### Why Pricing Strategy is Crucial for Chassis Parts in a Competitive Market?
 
 #### 1. **High Competition and Price Sensitivity**
 - Chassis parts are highly commoditized, making price a key differentiator.
@@ -47,3 +47,9 @@
 #### 7. **Long-Term Competitive Sustainability**
 - Effective pricing ensures both short-term sales growth and long-term business sustainability.
 - Businesses that proactively manage prices thrive despite ongoing market pressure.
+
+## Tools
+- Python
+- XL
+
+## Analysis
