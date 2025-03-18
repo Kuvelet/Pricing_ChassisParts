@@ -1,4 +1,4 @@
-# Pricing_ChassisParts
+# Smart Pricing in the Chassis Market
 
 ## Table of Contents
 
