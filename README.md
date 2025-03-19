@@ -10,6 +10,8 @@
 
 -[Data Cleaning & Preparation](#data-cleaning--preparation)
 
+-[Strategy](#strategy)
+
 -[Analysis](#analysis)
 
 -[Results & Findings](#results--findings)
