@@ -4,19 +4,19 @@
 
 - [Project Overview](#project-overview)
 
--[Data Sources](#data-sources)
+- [Data Sources](#data-sources)
 
--[Tools](#tools)
+- [Tools](#tools)
 
--[Data Cleaning & Preparation](#data-cleaning--preparation)
+- [Data Cleaning & Preparation](#data-cleaning--preparation)
 
--[Strategy](#strategy)
+- [Strategy](#strategy)
 
--[Analysis](#analysis)
+- [Analysis](#analysis)
 
--[Results & Findings](#results--findings)
+- [Results & Findings](#results--findings)
 
--[Next Steps](#next-steps)
+- [Next Steps](#next-steps)
 
 ## Project Overview
 
@@ -54,4 +54,4 @@
 - Python
 - XL
 
-## Analysis
+## Strategy
