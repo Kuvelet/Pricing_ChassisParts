@@ -4,13 +4,13 @@
 
 - [Project Overview](#project-overview)
 
-- [Data Sources](#data-sources)
-
 - [Tools](#tools)
 
-- [Data Cleaning & Preparation](#data-cleaning--preparation)
-
 - [Strategy](#strategy)
+
+- [Data Sources](#data-sources)
+
+- [Data Cleaning & Preparation](#data-cleaning--preparation)
 
 - [Analysis](#analysis)
 
