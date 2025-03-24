@@ -139,13 +139,15 @@ Once trained and validated, this model is applied inversely to the **Competitor_
 
 This field is essential for benchmarking our own **Cost_to_Retailer** values, identifying whether we are competitively priced in the B2B space, and informing our pricing strategy decisions.
 
-To estimate the competitor's **Cost to Retailer**, we apply a reverse-calculation method based on the regression models we’ve trained. Each model captures the relationship between internal wholesale prices (`Price Sold`) and public-facing retail prices (`Online Price`) for specific product types.
+To dynamically estimate the **Predicted Competitor Cost to Retailer**, we use an `IFS` formula in Excel that references the correct regression model for each unique combination of **Category** and **Material**.
 
-'''excel
+The formula checks the product's classification (columns `B` and `C`, e.g., `"Control Arm"` and `"Steel"`) and matches it with the corresponding regression parameters (Intercept and Slope) stored in a separate model summary table (e.g., in cells `$B$2:$C$11`). Each row in that table contains the **intercept** and **slope** for a specific Category–Material pair.
+
+The formula works as follows:
+
+```excel
 =IFS(AND(B14="Control Arm",C14="Steel"),(H14-$B$2)/$C$2,AND(B14="Ball Joint",C14="Steel"),(H14-$B$3)/$C$3,AND(B14="Tie Rod",C14="Steel"),(H14-$B$4)/$C$4,AND(B14="Tie Rod End",C14="Steel"),(H14-$B$5)/$C$5,AND(B14="Lateral Arm",C14="Steel"),(H14-$B$6)/$C$6,AND(B14="Control Arm",C14="Aluminum"),(H14-$B$7)/$C$7,AND(B14="Ball Joint",C14="Aluminum"),(H14-$B$8)/$C$8,AND(B14="Tie Rod",C14="Aluminum"),(H14-$B$9)/$C$9,AND(B14="Tie Rod End",C14="Aluminum"),(H14-$B$10)/$C$10,AND(B14="Lateral Arm",C14="Aluminum"),(H14-$B$11)/$C$11)
 ```
-
-Step-by-Step Computation:
 
 1. For each SKU, we identify its **Category–Material pair** (e.g., "Ball Joint–Steel", "Control Arm–Aluminum").
 2. We look up the **correct regression model parameters** (Intercept, Slope, and R²) for that specific pair from a model summary table stored in the Excel workbook (range **A1:D11**).
