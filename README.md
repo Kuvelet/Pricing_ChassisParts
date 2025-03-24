@@ -124,15 +124,16 @@ Here are some of the results:
 
 **1)** The pricing Excel tab contains structured data for each product SKU to support strategic pricing analysis. Each row represents a unique product and includes its **SKU**, which serves as the unique identifier, along with its **Category** (such as Ball Joint or Control Arm) and **Material** (e.g., Steel or Aluminum), which can influence pricing patterns. The **Own_Vendor_LDP** column reflects the Landed Duty Paid cost—our actual cost to bring the product into inventory, including shipping, duties, and associated fees. The **Cost_to_Retailer** column shows the current wholesale price we offer to retailers. Together, these fields form the foundation of our pricing model, allowing us to calculate markup, compare against competitors, and identify opportunities for pricing optimization.
 
-**2)** The **Own_Markup** column represents the markup factor we apply when pricing a product for wholesale. It is calculated by dividing the **Cost_to_Retailer** by the **Own_Vendor_LDP** (our landed cost). In other words, this value shows how much higher our selling price to the retailer is compared to our actual cost of acquiring the product. A markup of 1.5, for example, indicates that the product is sold to the retailer at a price that is 50% higher than our landed cost. This field is crucial for understanding profitability on a per-product basis and plays a key role in determining whether proposed pricing adjustments maintain sufficient margin. It also serves as a constraint in our pricing strategy to ensure we never set prices that result in a markup below a threshold (e.g., 1.4), which could jeopardize financial viability.
+**2)** 
+- The **Own_Markup** column represents the markup factor we apply when pricing a product for wholesale. It is calculated by dividing the **Cost_to_Retailer** by the **Own_Vendor_LDP** (our landed cost). In other words, this value shows how much higher our selling price to the retailer is compared to our actual cost of acquiring the product. A markup of 1.5, for example, indicates that the product is sold to the retailer at a price that is 50% higher than our landed cost. This field is crucial for understanding profitability on a per-product basis and plays a key role in determining whether proposed pricing adjustments maintain sufficient margin. It also serves as a constraint in our pricing strategy to ensure we never set prices that result in a markup below a threshold (e.g., 1.4), which could jeopardize financial viability.
 
-**3)** - **Own_Brand_Retail_Price**: This column represents the current retail price of our own brand’s product as listed publicly (e.g., on marketplaces or our partner websites). It reflects the final price a consumer would see when purchasing the product.
+- **Own_Brand_Retail_Price**: This column represents the current retail price of our own brand’s product as listed publicly (e.g., on marketplaces or our partner websites). It reflects the final price a consumer would see when purchasing the product.
 
 - **Competitor_Retail_Price**: This column shows the retail price of the equivalent competitor’s product, sourced through web scraping or market intelligence tools. It provides a direct benchmark for evaluating our positioning in the marketplace.
 
 - **Retail Price Diff**: This column calculates the percentage difference between our retail price and the competitor’s retail price. A negative value indicates our price is cheaper than the competitor’s, while a positive value indicates we are more expensive. This metric helps identify opportunities for retail price adjustment to improve competitiveness or profitability.
 
-
+**3)**
 
 
 
