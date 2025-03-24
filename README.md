@@ -106,8 +106,19 @@ This tells : "How much of the variation in retail prices for Control Arm (Steel)
 Here are some of the results:
 ![Picture3](https://github.com/user-attachments/assets/32a03206-564b-4eed-9996-3d125c2fc61e)
 ![Picture1](https://github.com/user-attachments/assets/8debbfba-7f73-4f0c-af2f-fa7df53cf153)
-![image](https://github.com/user-attachments/assets/dc737202-98aa-4376-9903-6e6ea6103543)
 
+| Dataset                 | Intercept     | Slope       | R-squared   |
+|-------------------------|---------------|-------------|-------------|
+| Control Arm & Steel     | 0.21283264    | 1.42157791  | 0.99609570  |
+| Ball Joint & Steel      | -0.07709675   | 1.47424611  | 0.99662970  |
+| Tie Rod & Steel         | 0.03821035    | 1.37796334  | 0.99625222  |
+| Tie Rod End & Steel     | -0.435188526  | 1.523054403 | 0.996383173 |
+| Lateral Arm & Steel     | -0.931043285  | 1.45020727  | 0.996640802 |
+| Control Arm & Aluminum  | -0.194223819  | 1.57691227  | 0.996511734 |
+| Ball Joint & Aluminum   | -0.569224642  | 1.630559283 | 0.996389419 |
+| Tie Rod & Aluminum      | 0.200281369   | 1.521492023 | 0.996425862 |
+| Tie Rod End & Aluminum  | -0.103081544  | 1.679375693 | 0.996434024 |
+| Lateral Arm & Aluminum  | -0.626185764  | 1.602068379 | 0.996676162 |
 
 
 
