@@ -160,7 +160,12 @@ The formula works as follows:
 )
 ```
 
-For each SKU, we begin by identifying its unique Category–Material pair (e.g., "Ball Joint–Steel" or "Control Arm–Aluminum"). Based on this classification, we retrieve the corresponding regression model parameters—including the intercept, slope, and R-squared—from a model summary table stored in the Excel workbook (specifically in the range A1:D11). Using these parameters, we apply the reverse of the regression equation to estimate the competitor’s wholesale price. This involves subtracting the intercept from the Competitor Retail Price, then dividing the result by the slope. The output of this calculation gives us the Predicted Competitor Cost to Retailer, which represents an estimated B2B price that our competitor is likely offering to their retail partners for that specific SKU.
+- For each SKU, we identify its **Category–Material pair** (e.g., "Ball Joint–Steel", "Control Arm–Aluminum").
+- We look up the **appropriate regression model parameters**—Intercept, Slope, and R²—for that specific pair from a model summary table stored in the Excel workbook (range **A1:D11**).
+- We apply the reverse regression formula to estimate the competitor’s cost:
+  - **Subtract** the Intercept value from the **Competitor Retail Price**
+  - **Divide** the result by the Slope
+- The result is the **Predicted Competitor Cost to Retailer**—an estimate of the price competitors are likely offering to their retail partners for that SKU.
 
 
 
