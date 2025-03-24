@@ -10,7 +10,7 @@
 
 - [Data Sources](#data-sources)
 
-- [Data Cleaning & Preparation](#data-cleaning--preparation)
+- Regression Analysis (#regression-analysis)
 
 - [Analysis](#analysis)
 
@@ -65,4 +65,12 @@ Once the regression models are established, I will use them inversely to estimat
 Finally, I will refine our pricing strategy by assessing whether adjustments—either increases or decreases—are warranted. This decision will be guided by key factors such as profit margin protection, market positioning.
 
 The goal is to determine whether it is more advantageous to increase or decrease our prices to optimize profitability while maintaining a strong competitive position in the market.
+
+## Data Sources
+
+- CSV of scraped price data. It includes two columns: 'Price Sold', which represents the actual cost at which we sell each product to the retailer, and 'Online Price', which reflects the publicly listed price obtained through Python-based web scraping. This dataset forms the foundation of our analysis, allowing us to compare our internal pricing with external market data and uncover the markup patterns applied by wholesalers.
+- Excel File with Analysis
+
+## Regression Analysis
+
 
