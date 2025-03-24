@@ -133,7 +133,29 @@ Here are some of the results:
 
 - **Retail Price Diff**: This column calculates the percentage difference between our retail price and the competitor’s retail price. A negative value indicates our price is cheaper than the competitor’s, while a positive value indicates we are more expensive. This metric helps identify opportunities for retail price adjustment to improve competitiveness or profitability.
 
-**3)**
+**3)** **PREDICTION of Competitors Cost to Retailer Using Regression** column contains the estimated wholesale price that competitors are likely offering to retailers, derived through a regression model. Since actual competitor wholesale prices are not publicly available, we developed a regression model using our internal **Price Sold** data and corresponding **Online Retail Prices** to understand the relationship between retail and wholesale pricing.
+
+Once trained and validated, this model is applied inversely to the **Competitor_Retail_Price** values, allowing us to estimate what our competitors might be charging their retailers behind the scenes. The result is a predicted **Cost to Retailer** from the competitor's side.
+
+This field is essential for benchmarking our own **Cost_to_Retailer** values, identifying whether we are competitively priced in the B2B space, and informing our pricing strategy decisions.
+
+To estimate the competitor's **Cost to Retailer**, we apply a reverse-calculation method based on the regression models we’ve trained. Each model captures the relationship between internal wholesale prices (`Price Sold`) and public-facing retail prices (`Online Price`) for specific product types.
+
+'''excel
+=IFS(AND(B14="Control Arm",C14="Steel"),(H14-$B$2)/$C$2,AND(B14="Ball Joint",C14="Steel"),(H14-$B$3)/$C$3,AND(B14="Tie Rod",C14="Steel"),(H14-$B$4)/$C$4,AND(B14="Tie Rod End",C14="Steel"),(H14-$B$5)/$C$5,AND(B14="Lateral Arm",C14="Steel"),(H14-$B$6)/$C$6,AND(B14="Control Arm",C14="Aluminum"),(H14-$B$7)/$C$7,AND(B14="Ball Joint",C14="Aluminum"),(H14-$B$8)/$C$8,AND(B14="Tie Rod",C14="Aluminum"),(H14-$B$9)/$C$9,AND(B14="Tie Rod End",C14="Aluminum"),(H14-$B$10)/$C$10,AND(B14="Lateral Arm",C14="Aluminum"),(H14-$B$11)/$C$11)
+```
+
+Step-by-Step Computation:
+
+1. For each SKU, we identify its **Category–Material pair** (e.g., "Ball Joint–Steel", "Control Arm–Aluminum").
+2. We look up the **correct regression model parameters** (Intercept, Slope, and R²) for that specific pair from a model summary table stored in the Excel workbook (range **A1:D11**).
+3. We apply the formula above:
+   - **Subtract** the Intercept value from the **Competitor Retail Price**
+   - **Divide** the result by the Slope
+4. The output is the **Predicted Competitor Cost to Retailer** — the estimated B2B price competitors are likely offering to retailers for that SKU.
+
+
+
 
 
 
