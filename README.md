@@ -71,6 +71,9 @@ The goal is to determine whether it is more advantageous to increase or decrease
 - CSV of scraped price data. It includes two columns: 'Cost to Retailer', which represents the actual cost at which we sell each product to the retailer, and 'Own Brand Retail Price', which reflects the publicly listed price obtained through Python-based web scraping. This dataset forms the foundation of our analysis, allowing us to compare our internal pricing with external market data and uncover the markup patterns applied by wholesalers.
 - Excel File with Analysis
 
+> **Note:** SKU names and pricing data is altered for confidentiality purposes
+
+
 ## Regression
 
 ### Objective
