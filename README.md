@@ -166,6 +166,7 @@ The formula works as follows:
   - **Divide** the result by the Slope
 - The result is the **Predicted Competitor Cost to Retailer**—an estimate of the price competitors are likely offering to their retail partners for that SKU.
 
+The **Difference (%) of Cost to Retailer** column measures how our current wholesale price (Cost to Retailer) compares to the **Predicted Competitor Cost to Retailer** generated through regression analysis. This percentage indicates whether we are offering our product to retailers at a higher or lower cost than our competitors.
 
 
 
