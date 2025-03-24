@@ -146,7 +146,18 @@ The formula checks the product's classification (columns `B` and `C`, e.g., `"Co
 The formula works as follows:
 
 ```excel
-=IFS(AND(B14="Control Arm",C14="Steel"),(H14-$B$2)/$C$2,AND(B14="Ball Joint",C14="Steel"),(H14-$B$3)/$C$3,AND(B14="Tie Rod",C14="Steel"),(H14-$B$4)/$C$4,AND(B14="Tie Rod End",C14="Steel"),(H14-$B$5)/$C$5,AND(B14="Lateral Arm",C14="Steel"),(H14-$B$6)/$C$6,AND(B14="Control Arm",C14="Aluminum"),(H14-$B$7)/$C$7,AND(B14="Ball Joint",C14="Aluminum"),(H14-$B$8)/$C$8,AND(B14="Tie Rod",C14="Aluminum"),(H14-$B$9)/$C$9,AND(B14="Tie Rod End",C14="Aluminum"),(H14-$B$10)/$C$10,AND(B14="Lateral Arm",C14="Aluminum"),(H14-$B$11)/$C$11)
+=IFS(
+  AND(B14="Control Arm",C14="Steel"),       (H14-$B$2)/$C$2,
+  AND(B14="Ball Joint",C14="Steel"),        (H14-$B$3)/$C$3,
+  AND(B14="Tie Rod",C14="Steel"),           (H14-$B$4)/$C$4,
+  AND(B14="Tie Rod End",C14="Steel"),       (H14-$B$5)/$C$5,
+  AND(B14="Lateral Arm",C14="Steel"),       (H14-$B$6)/$C$6,
+  AND(B14="Control Arm",C14="Aluminum"),    (H14-$B$7)/$C$7,
+  AND(B14="Ball Joint",C14="Aluminum"),     (H14-$B$8)/$C$8,
+  AND(B14="Tie Rod",C14="Aluminum"),        (H14-$B$9)/$C$9,
+  AND(B14="Tie Rod End",C14="Aluminum"),    (H14-$B$10)/$C$10,
+  AND(B14="Lateral Arm",C14="Aluminum"),    (H14-$B$11)/$C$11
+)
 ```
 
 1. For each SKU, we identify its **Category–Material pair** (e.g., "Ball Joint–Steel", "Control Arm–Aluminum").
