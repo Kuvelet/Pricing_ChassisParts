@@ -10,7 +10,7 @@
 
 - [Data Sources](#data-sources)
 
-- Regression(#regression)
+- [Regression](#regression)
 
 - [Analysis](#analysis)
 
