@@ -10,7 +10,7 @@
 
 - [Data Sources](#data-sources)
 
-- Regression Analysis (#regression-analysis)
+- Regression(#regression-analysis)
 
 - [Analysis](#analysis)
 
@@ -126,16 +126,5 @@ This returns the slope (markup multiplier) of the linear regression line based o
 ```
 This tells : "How much of the variation in retail prices for Control Arm (Steel) can be explained by the variation in your cost to retailers?"
 
-Dataset	Intercept	Slope	R-squared
-Control Arm & Steel	0.21283264	1.42157791	0.99609570
-Ball Joint & Steel	-0.07709675	1.47424611	0.99662970
-Tie Rod & Steel	0.03821035	1.37796334	0.99625222
-Tie Rod End & Steel	-0.435188526	1.523054403	0.996383173
-Lateral Arm & Steel	-0.931043285	1.45020727	0.996640802
-Control Arm & Aluminum	-0.194223819	1.57691227	0.996511734
-Ball Joint & Aluminum	-0.569224642	1.630559283	0.996389419
-Tie Rod & Aluminum	0.200281369	1.521492023	0.996425862
-Tie Rod End & Aluminum	-0.103081544	1.679375693	0.996434024
-Lateral Arm & Aluminum	-0.626185764	1.602068379	0.996676162
-![image](https://github.com/user-attachments/assets/e53a7fe2-b593-475c-b330-86a6ae26648c)
+![Picture1](https://github.com/user-attachments/assets/24a83c33-85d0-496e-85e7-e4235bd39fbd)
 
