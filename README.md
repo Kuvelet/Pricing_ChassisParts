@@ -126,5 +126,7 @@ This returns the slope (markup multiplier) of the linear regression line based o
 ```
 This tells : "How much of the variation in retail prices for Control Arm (Steel) can be explained by the variation in your cost to retailers?"
 
-![Picture1](https://github.com/user-attachments/assets/24a83c33-85d0-496e-85e7-e4235bd39fbd)
+Here are some of the results
+![Picture2](https://github.com/user-attachments/assets/fe564ee6-bfcd-4d99-b408-4273ca81a8f8)
+
 
