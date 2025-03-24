@@ -68,9 +68,60 @@ The goal is to determine whether it is more advantageous to increase or decrease
 
 ## Data Sources
 
-- CSV of scraped price data. It includes two columns: 'Price Sold', which represents the actual cost at which we sell each product to the retailer, and 'Online Price', which reflects the publicly listed price obtained through Python-based web scraping. This dataset forms the foundation of our analysis, allowing us to compare our internal pricing with external market data and uncover the markup patterns applied by wholesalers.
+- CSV of scraped price data. It includes two columns: 'Cost to Retailer', which represents the actual cost at which we sell each product to the retailer, and 'Own Brand Retail Price', which reflects the publicly listed price obtained through Python-based web scraping. This dataset forms the foundation of our analysis, allowing us to compare our internal pricing with external market data and uncover the markup patterns applied by wholesalers.
 - Excel File with Analysis
 
-## Regression Analysis
+## Regression
 
+### Objective
+
+This analysis models the relationship between the **Cost to Retailer** and the **Own Brand Retail Price** for 20,000 automotive SKUs. By understanding how much retailers typically mark up our parts, we can optimize our own pricing strategy—balancing profitability with market competitiveness.
+
+### Why I Grouped the Data
+
+We grouped and trained a **separate linear regression model** for each unique combination of **Category** (e.g., Control Arm, Ball Joint, Tie Rod) and **Material** (e.g., Steel, Aluminum). Pricing behaviors differ significantly between product types and materials. For example, Control Arms may have higher retail markups than Ball Joints, and Aluminum parts might follow a different pricing pattern than Steel parts. Grouping allows us to capture these nuances for more accurate and actionable insights.
+
+## Regression Implementation
+
+The data is stored in the `Report` sheet with the following columns:
+
+| Column | Header                 | Description                |
+|--------|------------------------|----------------------------|
+| B      | Category               | Product category           |
+| C      | Material               | Product material           |
+| E      | Cost_to_Retailer       | Our wholesale price        |
+| G      | Own_Brand_Retail_Price | Marketplace retail price   |
+
+We used  `LET`, `FILTER`, and `INDEX` functions to calculate regression values dynamically without creating separate sheets. For a specific combination like **Control Arm (Steel)**, the formulas are as follows:
+
+### Intercept
+
+```excel
+=LET(
+  filteredData, FILTER(Report!A14:H20013, (Report!B14:B20013="Control Arm") * (Report!C14:C20013="Steel")),
+  INTERCEPT(INDEX(filteredData,,7), INDEX(filteredData,,5))
+)
+```
+
+This formula filters the data to include only rows where Category is "Control Arm" and Material is "Steel", then calculates the intercept of the linear regression using column 5 (`Cost_to_Retailer`) as X and column 7 (`Own_Brand_Retail_Price`) as Y.
+
+### Slope
+
+```excel
+=LET(
+  filteredData, FILTER(Report!A14:H20013, (Report!B14:B20013="Control Arm") * (Report!C14:C20013="Steel")),
+  SLOPE(INDEX(filteredData,,7), INDEX(filteredData,,5))
+)
+```
+
+This returns the slope (markup multiplier) of the linear regression line based on the filtered dataset.
+
+### R-squared
+
+```excel
+=LET(
+  filteredData, FILTER(Report!A14:H20013, (Report!B14:B20013="Control Arm") * (Report!C14:C20013="Steel")),
+  RSQ(INDEX(filteredData,,7), INDEX(filteredData,,5))
+)
+```
 
