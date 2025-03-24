@@ -10,7 +10,7 @@
 
 - [Data Sources](#data-sources)
 
-- Regression(#regression-analysis)
+- Regression(#regression)
 
 - [Analysis](#analysis)
 
@@ -128,5 +128,9 @@ This tells : "How much of the variation in retail prices for Control Arm (Steel)
 
 Here are some of the results
 ![Picture3](https://github.com/user-attachments/assets/32a03206-564b-4eed-9996-3d125c2fc61e)
+![Picture1](https://github.com/user-attachments/assets/8debbfba-7f73-4f0c-af2f-fa7df53cf153)
+![image](https://github.com/user-attachments/assets/dc737202-98aa-4376-9903-6e6ea6103543)
+
+
 
 
