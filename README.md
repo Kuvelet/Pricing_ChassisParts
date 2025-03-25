@@ -363,3 +363,15 @@ Our ability to provide fair, consistent, and transparent pricing led to:
 | Exclusive listings (storefront/online) | +17 key categories |
 | Retailers increasing stock levels proactively | +9 major partners |
 | Reduction in customer churn (B2B accounts) | ▼ -17% |
+
+## Next Steps
+
+To build on the success of this pricing strategy project and further enhance its value to the organization, the following next steps are planned:
+
+- **Collaborate with Procurement on Vendor Negotiation**  
+  Use flagged SKUs (where profitable pricing is not achievable) to inform and support cost renegotiations with suppliers.
+  
+- **Run A/B Tests for Pricing Effectiveness**  
+  Conduct controlled experiments to evaluate the impact of price changes on sales performance, margin growth, and customer retention.
+
+
