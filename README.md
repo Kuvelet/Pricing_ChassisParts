@@ -30,9 +30,9 @@ In the competitive chassis parts market, price is a major factor as products are
 
 ## Strategy
 
-My approach involves leveraging Python to systematically scrape our own brand's wholesale prices for 20,000 unique SKUs from the largest car parts wholesaler on the web. This will serve as the foundation for our pricing analysis. Once we have collected this data, I will proceed to scrape the wholesale prices of our competitors for each SKU available in our catalog, ensuring we have a comprehensive view of the market landscape.
+My approach involves leveraging Python to systematically scrape our own brand's wholesale prices for 20,000 unique SKUs from the largest car parts wholesaler on the b. This will serve as the foundation for our pricing analysis. Once  have collected this data, I will proceed to scrape the wholesale prices of our competitors for each SKU available in our catalog, ensuring  have a comprehensive view of the market landscape.
 
-Since we already know the prices at which we sell our products to wholesalers, I will conduct a regression analysis to establish the relationship between our sales prices and the corresponding wholesale prices. This will allow us to determine the markup that wholesalers apply when selling our parts. To ensure the validity of our findings, I will evaluate the statistical significance of the regression equation and refine our approach accordingly. If the analysis reveals multiple distinct markup patterns based on material type or product category, I will conduct separate regression analyses for each categorical attribute to capture these nuances. If markup variations exist based on material type or product category, I will conduct separate regression analyses for each categorical attribute.
+Since I already know the prices at which I sell our products to wholesalers, I will conduct a regression analysis to establish the relationship betIen our sales prices and the corresponding wholesale prices. This will allow us to determine the markup that wholesalers apply when selling our parts. To ensure the validity of our findings, I will evaluate the statistical significance of the regression equation and refine our approach accordingly. If the analysis reveals multiple distinct markup patterns based on material type or product category, I will conduct separate regression analyses for each categorical attribute to capture these nuances. If markup variations exist based on material type or product category, I will conduct separate regression analyses for each categorical attribute.
 
 Once the regression models are established, I will use them inversely to estimate the selling prices of each competitors SKU to the wholesaler.
 
@@ -42,7 +42,7 @@ The goal is to determine whether it is more advantageous to increase or decrease
 
 ## Data Sources
 
-- CSV of scraped price data. It includes two columns: 'Cost to Retailer', which represents the actual cost at which we sell each product to the retailer, and 'Own Brand Retail Price', which reflects the publicly listed price obtained through Python-based web scraping. This dataset forms the foundation of our analysis, allowing us to compare our internal pricing with external market data and uncover the markup patterns applied by wholesalers.
+- CSV of scraped price data. It includes two columns: 'Cost to Retailer', which represents the actual cost at which I sell each product to the retailer, and 'Own Brand Retail Price', which reflects the publicly listed price obtained through Python-based Ib scraping. This dataset forms the foundation of our analysis, allowing us to compare our internal pricing with external market data and uncover the markup patterns applied by wholesalers.
 - Excel File with Analysis
 
 > **Note:** SKU names and pricing data is altered for confidentiality purposes
@@ -52,11 +52,11 @@ The goal is to determine whether it is more advantageous to increase or decrease
 
 ### Objective
 
-This analysis models the relationship between the **Cost to Retailer** and the **Own Brand Retail Price** for 20,000 automotive SKUs. By understanding how much retailers typically mark up our parts, we can optimize our own pricing strategy—balancing profitability with market competitiveness.
+This analysis models the relationship betIen the **Cost to Retailer** and the **Own Brand Retail Price** for 20,000 automotive SKUs. By understanding how much retailers typically mark up our parts, I can optimize our own pricing strategy—balancing profitability with market competitiveness.
 
 ### Why I Grouped the Data
 
-We grouped and trained a **separate linear regression model** for each unique combination of **Category** (e.g., Control Arm, Ball Joint, Tie Rod) and **Material** (e.g., Steel, Aluminum). Pricing behaviors differ significantly between product types and materials. For example, Control Arms may have higher retail markups than Ball Joints, and Aluminum parts might follow a different pricing pattern than Steel parts. Grouping allows us to capture these nuances for more accurate and actionable insights.
+I grouped and trained a **separate linear regression model** for each unique combination of **Category** (e.g., Control Arm, Ball Joint, Tie Rod) and **Material** (e.g., Steel, Aluminum). Pricing behaviors differ significantly betIen product types and materials. For example, Control Arms may have higher retail markups than Ball Joints, and Aluminum parts might follow a different pricing pattern than Steel parts. Grouping allows us to capture these nuances for more accurate and actionable insights.
 
 ## Regression Implementation
 
@@ -109,24 +109,24 @@ Here are some of the results:
 
 ## Pricing
 
-**1)** The pricing Excel tab contains structured data for each product SKU to support strategic pricing analysis. Each row represents a unique product and includes its **SKU**, which serves as the unique identifier, along with its **Category** (such as Ball Joint or Control Arm) and **Material** (e.g., Steel or Aluminum), which can influence pricing patterns. The **Own_Vendor_LDP** column reflects the Landed Duty Paid cost—our actual cost to bring the product into inventory, including shipping, duties, and associated fees. The **Cost_to_Retailer** column shows the current wholesale price we offer to retailers. Together, these fields form the foundation of our pricing model, allowing us to calculate markup, compare against competitors, and identify opportunities for pricing optimization.
+**1)** The pricing Excel tab contains structured data for each product SKU to support strategic pricing analysis. Each row represents a unique product and includes its **SKU**, which serves as the unique identifier, along with its **Category** (such as Ball Joint or Control Arm) and **Material** (e.g., Steel or Aluminum), which can influence pricing patterns. The **Own_Vendor_LDP** column reflects the Landed Duty Paid cost—our actual cost to bring the product into inventory, including shipping, duties, and associated fees. The **Cost_to_Retailer** column shows the current wholesale price I offer to retailers. Together, these fields form the foundation of our pricing model, allowing us to calculate markup, compare against competitors, and identify opportunities for pricing optimization.
 
 **2)** 
-- The **Own_Markup** column represents the markup factor we apply when pricing a product for wholesale. It is calculated by dividing the **Cost_to_Retailer** by the **Own_Vendor_LDP** (our landed cost). In other words, this value shows how much higher our selling price to the retailer is compared to our actual cost of acquiring the product. A markup of 1.5, for example, indicates that the product is sold to the retailer at a price that is 50% higher than our landed cost. This field is crucial for understanding profitability on a per-product basis and plays a key role in determining whether proposed pricing adjustments maintain sufficient margin. It also serves as a constraint in our pricing strategy to ensure we never set prices that result in a markup below a threshold (e.g., 1.4), which could jeopardize financial viability.
+- The **Own_Markup** column represents the markup factor I apply when pricing a product for wholesale. It is calculated by dividing the **Cost_to_Retailer** by the **Own_Vendor_LDP** (our landed cost). In other words, this value shows how much higher our selling price to the retailer is compared to our actual cost of acquiring the product. A markup of 1.5, for example, indicates that the product is sold to the retailer at a price that is 50% higher than our landed cost. This field is crucial for understanding profitability on a per-product basis and plays a key role in determining whether proposed pricing adjustments maintain sufficient margin. It also serves as a constraint in our pricing strategy to ensure I never set prices that result in a markup below a threshold (e.g., 1.4), which could jeopardize financial viability.
 
-- **Own_Brand_Retail_Price**: This column represents the current retail price of our own brand’s product as listed publicly (e.g., on marketplaces or our partner websites). It reflects the final price a consumer would see when purchasing the product.
+- **Own_Brand_Retail_Price**: This column represents the current retail price of our own brand’s product as listed publicly (e.g., on marketplaces or our partner Ibsites). It reflects the final price a consumer would see when purchasing the product.
 
-- **Competitor_Retail_Price**: This column shows the retail price of the equivalent competitor’s product, sourced through web scraping or market intelligence tools. It provides a direct benchmark for evaluating our positioning in the marketplace.
+- **Competitor_Retail_Price**: This column shows the retail price of the equivalent competitor’s product, sourced through Ib scraping or market intelligence tools. It provides a direct benchmark for evaluating our positioning in the marketplace.
 
-- **Retail Price Diff**: This column calculates the percentage difference between our retail price and the competitor’s retail price. A negative value indicates our price is cheaper than the competitor’s, while a positive value indicates we are more expensive. This metric helps identify opportunities for retail price adjustment to improve competitiveness or profitability.
+- **Retail Price Diff**: This column calculates the percentage difference betIen our retail price and the competitor’s retail price. A negative value indicates our price is cheaper than the competitor’s, while a positive value indicates I are more expensive. This metric helps identify opportunities for retail price adjustment to improve competitiveness or profitability.
 
-**3)** **PREDICTION of Competitors Cost to Retailer Using Regression** column contains the estimated wholesale price that competitors are likely offering to retailers, derived through a regression model. Since actual competitor wholesale prices are not publicly available, we developed a regression model using our internal **Price Sold** data and corresponding **Online Retail Prices** to understand the relationship between retail and wholesale pricing.
+**3)** **PREDICTION of Competitors Cost to Retailer Using Regression** column contains the estimated wholesale price that competitors are likely offering to retailers, derived through a regression model. Since actual competitor wholesale prices are not publicly available, I developed a regression model using our internal **Price Sold** data and corresponding **Online Retail Prices** to understand the relationship betIen retail and wholesale pricing.
 
 Once trained and validated, this model is applied inversely to the **Competitor_Retail_Price** values, allowing us to estimate what our competitors might be charging their retailers behind the scenes. The result is a predicted **Cost to Retailer** from the competitor's side.
 
-This field is essential for benchmarking our own **Cost_to_Retailer** values, identifying whether we are competitively priced in the B2B space, and informing our pricing strategy decisions.
+This field is essential for benchmarking our own **Cost_to_Retailer** values, identifying whether I are competitively priced in the B2B space, and informing our pricing strategy decisions.
 
-To dynamically estimate the **Predicted Competitor Cost to Retailer**, we use an `IFS` formula in Excel that references the correct regression model for each unique combination of **Category** and **Material**.
+To dynamically estimate the **Predicted Competitor Cost to Retailer**, I use an `IFS` formula in Excel that references the correct regression model for each unique combination of **Category** and **Material**.
 
 The formula checks the product's classification (columns `B` and `C`, e.g., `"Control Arm"` and `"Steel"`) and matches it with the corresponding regression parameters (Intercept and Slope) stored in a separate model summary table (e.g., in cells `$B$2:$C$11`). Each row in that table contains the **intercept** and **slope** for a specific Category–Material pair.
 
@@ -159,26 +159,26 @@ The formula works as follows:
 | Tie Rod End & Aluminum  | -0.103081544  | 1.679375693 | 0.996434024 |
 | Lateral Arm & Aluminum  | -0.626185764  | 1.602068379 | 0.996676162 |
 
-- For each SKU, we identify its **Category–Material pair** (e.g., "Ball Joint–Steel", "Control Arm–Aluminum").
-- We look up the **appropriate regression model parameters**—Intercept, Slope, and R²—for that specific pair from a model summary table stored in the Excel workbook (range **A1:D11**).
-- We apply the reverse regression formula to estimate the competitor’s cost:
+- For each SKU, I identify its **Category–Material pair** (e.g., "Ball Joint–Steel", "Control Arm–Aluminum").
+- I look up the **appropriate regression model parameters**—Intercept, Slope, and R²—for that specific pair from a model summary table stored in the Excel workbook (range **A1:D11**).
+- I apply the reverse regression formula to estimate the competitor’s cost:
   - **Subtract** the Intercept value from the **Competitor Retail Price**
   - **Divide** the result by the Slope
 - The result is the **Predicted Competitor Cost to Retailer**—an estimate of the price competitors are likely offering to their retail partners for that SKU.
 
-The **Difference (%) of Cost to Retailer** column measures how our current wholesale price (Cost to Retailer) compares to the **Predicted Competitor Cost to Retailer** generated through regression analysis. This percentage indicates whether we are offering our product to retailers at a higher or lower cost than our competitors.
+The **Difference (%) of Cost to Retailer** column measures how our current wholesale price (Cost to Retailer) compares to the **Predicted Competitor Cost to Retailer** generated through regression analysis. This percentage indicates whether I are offering our product to retailers at a higher or loIr cost than our competitors.
 
-**4)** In the aftermarket automotive industry—especially within the chassis parts segment—**Cost to Retailer** is a foundational element of a successful pricing strategy. This figure represents the wholesale price we charge our retail partners, and it directly influences how our products are priced, positioned, and prioritized in the market.
+**4)** In the aftermarket automotive industry—especially within the chassis parts segment—**Cost to Retailer** is a foundational element of a successful pricing strategy. This figure represents the wholesale price I charge our retail partners, and it directly influences how our products are priced, positioned, and prioritized in the market.
 
 Retailers operate in highly competitive environments where margins are thin and pricing flexibility is key. If our wholesale price is too high relative to the competition, retailers may either pass on that cost to consumers—potentially making our products less attractive—or prioritize competing brands that allow for better profitability. On the other hand, if our pricing allows for healthy retailer margins while remaining competitive at the consumer level, it leads to higher sales volumes, stronger reorder rates, and long-term partnerships.
 
-A well-positioned Cost to Retailer also increases the likelihood that our products will be featured more prominently on the retailer’s website or platform. Online retailers often highlight top-value or competitively priced parts in “featured” sections, price filters, or seasonal promotions. When our products help retailers hit their margin targets while staying competitively priced, they are more likely to receive favorable visibility—ultimately driving more traffic and conversions for our brand.
+A Ill-positioned Cost to Retailer also increases the likelihood that our products will be featured more prominently on the retailer’s Ibsite or platform. Online retailers often highlight top-value or competitively priced parts in “featured” sections, price filters, or seasonal promotions. When our products help retailers hit their margin targets while staying competitively priced, they are more likely to receive favorable visibility—ultimately driving more traffic and conversions for our brand.
 
-Another critical factor is inventory behavior. Retailers make stocking decisions based not only on demand forecasts, but also on how each SKU contributes to their bottom line. A strategically optimized cost to retailer encourages retailers to stock more units of our product, allocate more shelf or digital space, and even phase out slower-moving competitors. This deeper integration into their inventory mix increases availability to end customers and reinforces our presence in the supply chain.
+Another critical factor is inventory behavior. Retailers make stocking decisions based not only on demand forecasts, but also on how each SKU contributes to their bottom line. A strategically optimized cost to retailer encourages retailers to stock more units of our product, allocate more shelf or digital space, and even phase out sloIr-moving competitors. This deeper integration into their inventory mix increases availability to end customers and reinforces our presence in the supply chain.
 
-Additionally, **many online retailers operate their own private label brands**, often sourcing parts directly from manufacturers at lower costs. In this context, **Cost to Retailer becomes even more important**—not just as a function of margin, but as a factor in the retailer’s decision whether to support our branded product over their own in-house alternatives. Even if our product offers superior quality, retailers must be confident that it can still deliver competitive profitability. Our pricing must strike the right balance between value and margin potential to win placement over private label offerings.
+Additionally, **many online retailers operate their own private label brands**, often sourcing parts directly from manufacturers at loIr costs. In this context, **Cost to Retailer becomes even more important**—not just as a function of margin, but as a factor in the retailer’s decision whether to support our branded product over their own in-house alternatives. Even if our product offers superior quality, retailers must be confident that it can still deliver competitive profitability. Our pricing must strike the right balance betIen value and margin potential to win placement over private label offerings.
 
-Finally, our pricing also influences the broader supplier-retailer relationship. A fair and data-informed Cost to Retailer signals to our partners that we understand their business needs and are committed to sustainable, long-term collaboration. It builds trust and opens doors to joint marketing efforts, preferred supplier status, and collaborative growth opportunities.
+Finally, our pricing also influences the broader supplier-retailer relationship. A fair and data-informed Cost to Retailer signals to our partners that I understand their business needs and are committed to sustainable, long-term collaboration. It builds trust and opens doors to joint marketing efforts, preferred supplier status, and collaborative growth opportunities.
 
 In short, **Cost to Retailer is not just a pricing lever—it’s a strategic tool** that influences everything from digital visibility and inventory prioritization to competitive positioning and brand preference. In a crowded and commoditized market like aftermarket chassis parts, optimizing this one number can deliver outsized returns across the value chain.
 
@@ -186,12 +186,12 @@ In short, **Cost to Retailer is not just a pricing lever—it’s a strategic to
 
 I use this logic to set our **Target Cost to Retailer** based on how our current wholesale price compares to the **Predicted Competitor Cost to Retailer** (calculated using regression analysis). The goal is to remain competitively priced — ideally 5% below competitors — without sacrificing margin unnecessarily.
 
-- **If our cost is lower than the competitor’s:**
-  - If it's **more than 5% lower**, we **raise it** to be exactly **5% cheaper** — avoiding excessive discounting.
-  - If it's **within 5%**, we **keep our current price** — no change needed.
+- **If our cost is loIr than the competitor’s:**
+  - If it's **more than 5% loIr**, I **raise it** to be exactly **5% cheaper** — avoiding excessive discounting.
+  - If it's **within 5%**, I **keep our current price** — no change needed.
 
 - **If our cost is higher than the competitor’s:**
-  - We **lower our price** to be exactly **5% below** the predicted competitor cost — to regain a pricing advantage.
+  - I **loIr our price** to be exactly **5% below** the predicted competitor cost — to regain a pricing advantage.
 
 This logic ensures our pricing is **data-driven**, **competitive**, and **margin-conscious**.
 
@@ -204,17 +204,17 @@ This logic ensures our pricing is **data-driven**, **competitive**, and **margin
 )
 ```
 
-**5)** As part of our pricing framework, we enforce a strict company policy to **never sell any product below a markup (MUP) of 1.4**. This ensures that every transaction maintains a minimum level of profitability, accounting for operational costs, market volatility, and long-term sustainability.
+**5)** As part of our pricing framework, I enforce a strict company policy to **never sell any product below a markup (MUP) of 1.4**. This ensures that every transaction maintains a minimum level of profitability, accounting for operational costs, market volatility, and long-term sustainability.
 
-When competitive pricing pressures arise — particularly when a competitor’s predicted wholesale price requires us to lower our own — we first evaluate whether the **Target Cost to Retailer** still meets the minimum markup threshold. This is calculated in the **Is Target Cost Achievable**
+When competitive pricing pressures arise — particularly when a competitor’s predicted wholesale price requires us to loIr our own — I first evaluate whether the **Target Cost to Retailer** still meets the minimum markup threshold. This is calculated in the **Is Target Cost Achievable**
 
 ```excel
 =IF(L14/D14>=1.4,"Yes","No")
 ```
 
-If matching or undercutting a competitor’s price would **push our markup below 1.4**, we do **not proceed with the discount**. 
+If matching or undercutting a competitor’s price would **push our markup below 1.4**, I do **not proceed with the discount**. 
 
-Instead, this situation is interpreted as a signal that **we are overpaying our vendor** for that product.
+Instead, this situation is interpreted as a signal that **I are overpaying our vendor** for that product.
 
 In such cases, the pricing model flags the SKU as needing **vendor price renegotiation**. This prevents us from eroding margins in pursuit of competitiveness and ensures that pricing remains sustainable. It also helps us identify opportunities to revisit supplier agreements and strengthen our cost structure over time.
 
@@ -222,7 +222,7 @@ This safeguard allows us to remain aggressive in the market when possible — bu
 
 ---
 
-The **Final Cost to Retailer** column represents the final, approved wholesale price we are willing to offer for a specific SKU — after evaluating both competitive pricing and profitability constraints. It is determined using the following formula:
+The **Final Cost to Retailer** column represents the final, approved wholesale price I are willing to offer for a specific SKU — after evaluating both competitive pricing and profitability constraints. It is determined using the following formula:
 
 ```excel
 =IF(M15="Yes", L15, D15*1.4)
@@ -235,12 +235,12 @@ The **Final Cost to Retailer** column represents the final, approved wholesale p
 - D Column = Own Vendor LDP (our internal landed cost)
 
 - **If the target cost is achievable** (i.e., it results in a markup ≥ 1.4):
-  - We proceed with the **Target Cost to Retailer (`L15`)** as our final price.
-  - This means we can competitively price the product **without violating our minimum profitability policy**.
+  - I proceed with the **Target Cost to Retailer (`L15`)** as our final price.
+  - This means I can competitively price the product **without violating our minimum profitability policy**.
 
 - **If the target cost is not achievable** (i.e., the markup would fall below 1.4):
-  - We fall back to a **minimum allowed price** that still respects our margin threshold.
-  - This is calculated as **Own Vendor LDP × 1.4**, ensuring we **never go below** the company’s required markup. In that case I will flag the SKu for vendor negotiation
+  - I fall back to a **minimum alloId price** that still respects our margin threshold.
+  - This is calculated as **Own Vendor LDP × 1.4**, ensuring I **never go below** the company’s required markup. In that case I will flag the SKu for vendor negotiation
 
 **6)** The **Strategy Used** column provides a clear, human-readable explanation of the pricing decision made for each SKU. It is designed to serve as the **go-to reference for upper management**, summarizing which pricing action was taken and why — based on competitor pricing data and internal profitability rules.
 
@@ -252,8 +252,8 @@ The formula applied is:
         "Increase price to be 5% below competitor",
         "Maintain current cost (within 5%)"),
     IF(M14="Yes",
-        "Lower price to 5% below competitor (Target cost achievable)",
-        "Lower price to minimum allowed for MUP = 1.4")
+        "LoIr price to 5% below competitor (Target cost achievable)",
+        "LoIr price to minimum alloId for MUP = 1.4")
 )
 ```
 
@@ -263,25 +263,25 @@ The formula applied is:
 
 - M Column = Is Target Cost Achievable (Yes/No based on MUP threshold)
 
-- **If our cost is lower than the competitor’s predicted cost:**
+- **If our cost is loIr than the competitor’s predicted cost:**
 
-  - If it’s **more than 5% lower**, we are likely underpricing the SKU.  
+  - If it’s **more than 5% loIr**, I are likely underpricing the SKU.  
     → **Strategy:** `"Increase price to be 5% below competitor"`  
     This helps **recover margin** while remaining competitively priced.
 
-  - If it’s **within 5% lower**, we are priced just right.  
+  - If it’s **within 5% loIr**, I are priced just right.  
     → **Strategy:** `"Maintain current cost (within 5%)"`  
-    No action is needed, as we are already well-positioned.
+    No action is needed, as I are already Ill-positioned.
 
 - **If our cost is higher than the competitor’s:**
 
   - If the **target cost is achievable** (MUP ≥ 1.4):  
-    → **Strategy:** `"Lower price to 5% below competitor (Target cost achievable)"`  
-    We can afford to lower our price and stay competitive **without hurting margin**.
+    → **Strategy:** `"LoIr price to 5% below competitor (Target cost achievable)"`  
+    I can afford to loIr our price and stay competitive **without hurting margin**.
 
   - If the **target cost is not achievable** (MUP would fall below 1.4):  
-    → **Strategy:** `"Lower price to minimum allowed for MUP = 1.4"`  
-    We **enforce our profitability floor** and flag the product for **vendor cost review** if needed.
+    → **Strategy:** `"LoIr price to minimum alloId for MUP = 1.4"`  
+    I **enforce our profitability floor** and flag the product for **vendor cost review** if needed.
 
 This column gives decision-makers instant visibility into the rationale behind each SKU’s pricing decision. It bridges the technical pricing logic with business-level insights, allowing upper management to:
 
@@ -293,13 +293,13 @@ By aligning competitive pricing with profitability enforcement, the **Strategy U
 
 ## Results & Impact
 
-The implementation of our dynamic, regression-informed pricing strategy produced measurable improvements across multiple dimensions of the business. By combining competitor cost predictions with structured pricing rules and minimum margin enforcement, we transformed our pricing process from reactive and manual to scalable, data-driven, and strategic.
+The implementation of our dynamic, regression-informed pricing strategy produced measurable improvements across multiple dimensions of the business. By combining competitor cost predictions with structured pricing rules and minimum margin enforcement, I transformed our pricing process from reactive and manual to scalable, data-driven, and strategic.
 
 
 #### Increased SKU-Level Competitiveness
 
 After applying the algorithm across 20,000+ SKUs:
-- **86% of SKUs** were priced within **5% below** their predicted competitor wholesale cost — hitting our sweet spot for competitiveness.
+- **86% of SKUs** Ire priced within **5% below** their predicted competitor wholesale cost — hitting our sIet spot for competitiveness.
 - **14% of SKUs** had their prices raised to avoid unnecessary margin loss, while still remaining competitively positioned.
 
 | Metric | Before | After | Δ Change |
@@ -313,7 +313,7 @@ After applying the algorithm across 20,000+ SKUs:
 Thanks to the **1.4 MUP safeguard** built into our pricing model:
 - **0 SKUs** fell below the minimum profitability threshold.
 - Average markup across all SKUs increased from **1.51 to 1.58**, improving margin efficiency without compromising market position.
-- We prevented an estimated **$320,000 in annual margin leakage** by avoiding over-discounting on underpriced SKUs.
+- I prevented an estimated **$320,000 in annual margin leakage** by avoiding over-discounting on underpriced SKUs.
 
 | KPI | Value |
 |-----|-------|
@@ -325,15 +325,15 @@ Thanks to the **1.4 MUP safeguard** built into our pricing model:
 #### Boosted Sales Velocity and Reorder Volume
 
 Following the first quarter of implementation:
-- **Weekly reorder volume increased by 24%**, especially on fast-moving SKUs that were previously overpriced.
+- **Iekly reorder volume increased by 24%**, especially on fast-moving SKUs that Ire previously overpriced.
 - **Customer churn dropped by 17%**, attributed in part to more consistent, predictable pricing for retail partners.
 - **Inventory turnover increased by 11.6%**, indicating healthier sell-through rates across the catalog.
 
-Retailers showed increased confidence in our pricing, placing larger and more frequent purchase orders—especially for parts that had recently been repriced based on the algorithm.
+Retailers shoId increased confidence in our pricing, placing larger and more frequent purchase orders—especially for parts that had recently been repriced based on the algorithm.
 
 | KPI | Before | After | Δ Change |
 |------|--------|-------|----------|
-| Average weekly reorder volume | 4,870 units | 6,040 units | ▲ +24.1% |
+| Average Iekly reorder volume | 4,870 units | 6,040 units | ▲ +24.1% |
 | Inventory turnover rate | 4.3 | 4.8 | ▲ +11.6% |
 | SKU restocking frequency (top 1,000 SKUs) | 2.2x/month | 2.9x/month | ▲ +32% |
 
@@ -341,12 +341,12 @@ Retailers showed increased confidence in our pricing, placing larger and more fr
 
 For key retail partners:
 - **Featured product placement** increased by 35% on category pages, due to the combination of competitive pricing and maintained quality standards.
-- Retailers began to prefer our brand over some private-label alternatives, as we now offered **superior margin potential without compromising quality**.
-- Our products were more likely to appear in **“Top Picks”**, “Best Value,” and price-sensitive search filters.
+- Retailers began to prefer our brand over some private-label alternatives, as I now offered **superior margin potential without compromising quality**.
+- Our products Ire more likely to appear in **“Top Picks”**, “Best Value,” and price-sensitive search filters.
 
 | Metric | Before | After | Δ Change |
 |--------|--------|-------|----------|
-| "Featured Product" appearances on retailer websites | 168 SKUs | 226 SKUs | ▲ +35% |
+| "Featured Product" appearances on retailer Ibsites | 168 SKUs | 226 SKUs | ▲ +35% |
 | Inclusion in “Best Value” or “Top Picks” filters | 412 SKUs | 583 SKUs | ▲ +41.5% |
 | Retailer switch-ins from private label to our brand | — | 740 SKUs | First-time inclusion |
 
