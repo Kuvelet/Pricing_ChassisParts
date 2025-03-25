@@ -220,11 +220,76 @@ In such cases, the pricing model flags the SKU as needing **vendor price renegot
 
 This safeguard allows us to remain aggressive in the market when possible — but never at the cost of profitability.
 
-xxx
+---
 
+The **Final Cost to Retailer** column represents the final, approved wholesale price we are willing to offer for a specific SKU — after evaluating both competitive pricing and profitability constraints. It is determined using the following formula:
 
+```excel
+=IF(M15="Yes", L15, D15*1.4)
+```
 
+- M Column = Is Target Cost Achievable (returns "Yes" or "No")
 
+- L Column = Target Cost to Retailer (based on competitor pricing logic)
+
+- D Column = Own Vendor LDP (our internal landed cost)
+
+- **If the target cost is achievable** (i.e., it results in a markup ≥ 1.4):
+  - We proceed with the **Target Cost to Retailer (`L15`)** as our final price.
+  - This means we can competitively price the product **without violating our minimum profitability policy**.
+
+- **If the target cost is not achievable** (i.e., the markup would fall below 1.4):
+  - We fall back to a **minimum allowed price** that still respects our margin threshold.
+  - This is calculated as **Own Vendor LDP × 1.4**, ensuring we **never go below** the company’s required markup. In that case I will flag the SKu for vendor negotiation
+
+**6)** The **Strategy Used** column provides a clear, human-readable explanation of the pricing decision made for each SKU. It is designed to serve as the **go-to reference for upper management**, summarizing which pricing action was taken and why — based on competitor pricing data and internal profitability rules.
+
+The formula applied is:
+
+```excel
+=IF(E14<J14,
+    IF(E14/J14<0.95,
+        "Increase price to be 5% below competitor",
+        "Maintain current cost (within 5%)"),
+    IF(M14="Yes",
+        "Lower price to 5% below competitor (Target cost achievable)",
+        "Lower price to minimum allowed for MUP = 1.4")
+)
+```
+
+- E Column = Our Current Cost to Retailer
+
+- J Column = Predicted Competitor Cost to Retailer (from regression)
+
+- M Column = Is Target Cost Achievable (Yes/No based on MUP threshold)
+
+- **If our cost is lower than the competitor’s predicted cost:**
+
+  - If it’s **more than 5% lower**, we are likely underpricing the SKU.  
+    → **Strategy:** `"Increase price to be 5% below competitor"`  
+    This helps **recover margin** while remaining competitively priced.
+
+  - If it’s **within 5% lower**, we are priced just right.  
+    → **Strategy:** `"Maintain current cost (within 5%)"`  
+    No action is needed, as we are already well-positioned.
+
+- **If our cost is higher than the competitor’s:**
+
+  - If the **target cost is achievable** (MUP ≥ 1.4):  
+    → **Strategy:** `"Lower price to 5% below competitor (Target cost achievable)"`  
+    We can afford to lower our price and stay competitive **without hurting margin**.
+
+  - If the **target cost is not achievable** (MUP would fall below 1.4):  
+    → **Strategy:** `"Lower price to minimum allowed for MUP = 1.4"`  
+    We **enforce our profitability floor** and flag the product for **vendor cost review** if needed.
+
+This column gives decision-makers instant visibility into the rationale behind each SKU’s pricing decision. It bridges the technical pricing logic with business-level insights, allowing upper management to:
+
+- Review how many SKUs required increases, reductions, or no change  
+- Identify SKUs hitting margin limits  
+- Prioritize follow-ups with suppliers for cost renegotiation  
+
+By aligning competitive pricing with profitability enforcement, the **Strategy Used** column becomes the anchor point for high-level pricing oversight.
 
 ## Results & Impact
 
