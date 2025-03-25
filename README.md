@@ -204,7 +204,7 @@ After applying the algorithm across 20,000+ SKUs:
 |--------|--------|-------|----------|
 | % of SKUs within ideal competitive range (≤ 5% below competitor) | 41% | 86% | ▲ +45 pts |
 | % of SKUs underpriced by more than 10% | 22% | 0% | ▼ -22 pts |
-| % of SKUs failing to meet MUP ≥ 1.4 | 7.8% | 0% | ✅ Eliminated |
+| % of SKUs failing to meet MUP ≥ 1.4 | 7.8% | 0% | Eliminated |
 
 #### Protected and Improved Profit Margins
 
@@ -246,7 +246,7 @@ For key retail partners:
 |--------|--------|-------|----------|
 | "Featured Product" appearances on retailer websites | 168 SKUs | 226 SKUs | ▲ +35% |
 | Inclusion in “Best Value” or “Top Picks” filters | 412 SKUs | 583 SKUs | ▲ +41.5% |
-| Retailer switch-ins from private label to our brand | — | 740 SKUs | 📈 First-time inclusion |
+| Retailer switch-ins from private label to our brand | — | 740 SKUs | First-time inclusion |
 
 #### Strengthened Retailer Relationships
 
