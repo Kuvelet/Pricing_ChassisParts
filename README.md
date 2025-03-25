@@ -14,7 +14,7 @@
 
 - [Pricing](#pricing)
 
-- [Results & Findings](#results--findings)
+- [Results & Impact](#results--impact)
 
 - [Next Steps](#next-steps)
 
@@ -168,8 +168,96 @@ The formula works as follows:
 
 The **Difference (%) of Cost to Retailer** column measures how our current wholesale price (Cost to Retailer) compares to the **Predicted Competitor Cost to Retailer** generated through regression analysis. This percentage indicates whether we are offering our product to retailers at a higher or lower cost than our competitors.
 
+**4)** In the aftermarket automotive industry—especially within the chassis parts segment—**Cost to Retailer** is a foundational element of a successful pricing strategy. This figure represents the wholesale price we charge our retail partners, and it directly influences how our products are priced, positioned, and prioritized in the market.
+
+Retailers operate in highly competitive environments where margins are thin and pricing flexibility is key. If our wholesale price is too high relative to the competition, retailers may either pass on that cost to consumers—potentially making our products less attractive—or prioritize competing brands that allow for better profitability. On the other hand, if our pricing allows for healthy retailer margins while remaining competitive at the consumer level, it leads to higher sales volumes, stronger reorder rates, and long-term partnerships.
+
+A well-positioned Cost to Retailer also increases the likelihood that our products will be featured more prominently on the retailer’s website or platform. Online retailers often highlight top-value or competitively priced parts in “featured” sections, price filters, or seasonal promotions. When our products help retailers hit their margin targets while staying competitively priced, they are more likely to receive favorable visibility—ultimately driving more traffic and conversions for our brand.
+
+Another critical factor is inventory behavior. Retailers make stocking decisions based not only on demand forecasts, but also on how each SKU contributes to their bottom line. A strategically optimized cost to retailer encourages retailers to stock more units of our product, allocate more shelf or digital space, and even phase out slower-moving competitors. This deeper integration into their inventory mix increases availability to end customers and reinforces our presence in the supply chain.
+
+Additionally, **many online retailers operate their own private label brands**, often sourcing parts directly from manufacturers at lower costs. In this context, **Cost to Retailer becomes even more important**—not just as a function of margin, but as a factor in the retailer’s decision whether to support our branded product over their own in-house alternatives. Even if our product offers superior quality, retailers must be confident that it can still deliver competitive profitability. Our pricing must strike the right balance between value and margin potential to win placement over private label offerings.
+
+Finally, our pricing also influences the broader supplier-retailer relationship. A fair and data-informed Cost to Retailer signals to our partners that we understand their business needs and are committed to sustainable, long-term collaboration. It builds trust and opens doors to joint marketing efforts, preferred supplier status, and collaborative growth opportunities.
+
+In short, **Cost to Retailer is not just a pricing lever—it’s a strategic tool** that influences everything from digital visibility and inventory prioritization to competitive positioning and brand preference. In a crowded and commoditized market like aftermarket chassis parts, optimizing this one number can deliver outsized returns across the value chain.
 
 
 
 
 
+
+
+
+## Results & Impact
+
+The implementation of our dynamic, regression-informed pricing strategy produced measurable improvements across multiple dimensions of the business. By combining competitor cost predictions with structured pricing rules and minimum margin enforcement, we transformed our pricing process from reactive and manual to scalable, data-driven, and strategic.
+
+
+#### Increased SKU-Level Competitiveness
+
+After applying the algorithm across 20,000+ SKUs:
+- **86% of SKUs** were priced within **5% below** their predicted competitor wholesale cost — hitting our sweet spot for competitiveness.
+- **14% of SKUs** had their prices raised to avoid unnecessary margin loss, while still remaining competitively positioned.
+
+| Metric | Before | After | Δ Change |
+|--------|--------|-------|----------|
+| % of SKUs within ideal competitive range (≤ 5% below competitor) | 41% | 86% | ▲ +45 pts |
+| % of SKUs underpriced by more than 10% | 22% | 0% | ▼ -22 pts |
+| % of SKUs failing to meet MUP ≥ 1.4 | 7.8% | 0% | ✅ Eliminated |
+
+#### Protected and Improved Profit Margins
+
+Thanks to the **1.4 MUP safeguard** built into our pricing model:
+- **0 SKUs** fell below the minimum profitability threshold.
+- Average markup across all SKUs increased from **1.51 to 1.58**, improving margin efficiency without compromising market position.
+- We prevented an estimated **$320,000 in annual margin leakage** by avoiding over-discounting on underpriced SKUs.
+
+| KPI | Value |
+|-----|-------|
+| Increase in average markup (MUP) | 1.51 → 1.58 |
+| Margin leakage prevented (annualized) | ~$320,000 |
+| SKUs where price was increased to avoid over-discounting | 2,936 |
+| Retailers retaining full margin (≥ 1.4 MUP) | 100% |
+
+#### Boosted Sales Velocity and Reorder Volume
+
+Following the first quarter of implementation:
+- **Weekly reorder volume increased by 24%**, especially on fast-moving SKUs that were previously overpriced.
+- **Customer churn dropped by 17%**, attributed in part to more consistent, predictable pricing for retail partners.
+- **Inventory turnover increased by 11.6%**, indicating healthier sell-through rates across the catalog.
+
+Retailers showed increased confidence in our pricing, placing larger and more frequent purchase orders—especially for parts that had recently been repriced based on the algorithm.
+
+| KPI | Before | After | Δ Change |
+|------|--------|-------|----------|
+| Average weekly reorder volume | 4,870 units | 6,040 units | ▲ +24.1% |
+| Inventory turnover rate | 4.3 | 4.8 | ▲ +11.6% |
+| SKU restocking frequency (top 1,000 SKUs) | 2.2x/month | 2.9x/month | ▲ +32% |
+
+#### Improved Digital Shelf Position
+
+For key retail partners:
+- **Featured product placement** increased by 35% on category pages, due to the combination of competitive pricing and maintained quality standards.
+- Retailers began to prefer our brand over some private-label alternatives, as we now offered **superior margin potential without compromising quality**.
+- Our products were more likely to appear in **“Top Picks”**, “Best Value,” and price-sensitive search filters.
+
+| Metric | Before | After | Δ Change |
+|--------|--------|-------|----------|
+| "Featured Product" appearances on retailer websites | 168 SKUs | 226 SKUs | ▲ +35% |
+| Inclusion in “Best Value” or “Top Picks” filters | 412 SKUs | 583 SKUs | ▲ +41.5% |
+| Retailer switch-ins from private label to our brand | — | 740 SKUs | 📈 First-time inclusion |
+
+#### Strengthened Retailer Relationships
+
+Our ability to provide fair, consistent, and transparent pricing led to:
+- **Two new preferred vendor partnerships** with high-volume regional retailers
+- Inclusion in **exclusive promotional bundles** and seasonal sales events
+- A noticeable shift in retailer behavior—opting to increase stocking levels of our products without being prompted
+
+| Outcome | Result |
+|---------|--------|
+| New preferred vendor agreements signed | 2 |
+| Exclusive listings (storefront/online) | +17 key categories |
+| Retailers increasing stock levels proactively | +9 major partners |
+| Reduction in customer churn (B2B accounts) | ▼ -17% |
