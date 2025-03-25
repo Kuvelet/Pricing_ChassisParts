@@ -181,7 +181,9 @@ Additionally, **many online retailers operate their own private label brands**, 
 Finally, our pricing also influences the broader supplier-retailer relationship. A fair and data-informed Cost to Retailer signals to our partners that we understand their business needs and are committed to sustainable, long-term collaboration. It builds trust and opens doors to joint marketing efforts, preferred supplier status, and collaborative growth opportunities.
 
 In short, **Cost to Retailer is not just a pricing lever—it’s a strategic tool** that influences everything from digital visibility and inventory prioritization to competitive positioning and brand preference. In a crowded and commoditized market like aftermarket chassis parts, optimizing this one number can deliver outsized returns across the value chain.
+
 ---
+
 I use this logic to set our **Target Cost to Retailer** based on how our current wholesale price compares to the **Predicted Competitor Cost to Retailer** (calculated using regression analysis). The goal is to remain competitively priced — ideally 5% below competitors — without sacrificing margin unnecessarily.
 
 - **If our cost is lower than the competitor’s:**
