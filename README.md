@@ -204,7 +204,23 @@ This logic ensures our pricing is **data-driven**, **competitive**, and **margin
 )
 ```
 
+**5)** As part of our pricing framework, we enforce a strict company policy to **never sell any product below a markup (MUP) of 1.4**. This ensures that every transaction maintains a minimum level of profitability, accounting for operational costs, market volatility, and long-term sustainability.
 
+When competitive pricing pressures arise — particularly when a competitor’s predicted wholesale price requires us to lower our own — we first evaluate whether the **Target Cost to Retailer** still meets the minimum markup threshold. This is calculated in the **Is Target Cost Achievable**
+
+```excel
+=IF(L14/D14>=1.4,"Yes","No")
+```
+
+If matching or undercutting a competitor’s price would **push our markup below 1.4**, we do **not proceed with the discount**. 
+
+Instead, this situation is interpreted as a signal that **we are overpaying our vendor** for that product.
+
+In such cases, the pricing model flags the SKU as needing **vendor price renegotiation**. This prevents us from eroding margins in pursuit of competitiveness and ensures that pricing remains sustainable. It also helps us identify opportunities to revisit supplier agreements and strengthen our cost structure over time.
+
+This safeguard allows us to remain aggressive in the market when possible — but never at the cost of profitability.
+
+xxx
 
 
 
