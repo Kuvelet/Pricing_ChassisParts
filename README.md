@@ -166,7 +166,7 @@ The formula works as follows:
   - **Divide** the result by the Slope
 - The result is the **Predicted Competitor Cost to Retailer**—an estimate of the price competitors are likely offering to their retail partners for that SKU.
 
-The **Difference (%) of Cost to Retailer** column measures how our current wholesale price (Cost to Retailer) compares to the **Predicted Competitor Cost to Retailer** generated through regression analysis. This percentage indicates whether I are offering our product to retailers at a higher or loIr cost than our competitors.
+The **Difference (%) of Cost to Retailer** column measures how our current wholesale price (Cost to Retailer) compares to the **Predicted Competitor Cost to Retailer** generated through regression analysis. This percentage indicates whether I are offering our product to retailers at a higher or lower cost than our competitors.
 
 **4)** In the aftermarket automotive industry—especially within the chassis parts segment—**Cost to Retailer** is a foundational element of a successful pricing strategy. This figure represents the wholesale price I charge our retail partners, and it directly influences how our products are priced, positioned, and prioritized in the market.
 
@@ -174,9 +174,9 @@ Retailers operate in highly competitive environments where margins are thin and 
 
 A Ill-positioned Cost to Retailer also increases the likelihood that our products will be featured more prominently on the retailer’s Ibsite or platform. Online retailers often highlight top-value or competitively priced parts in “featured” sections, price filters, or seasonal promotions. When our products help retailers hit their margin targets while staying competitively priced, they are more likely to receive favorable visibility—ultimately driving more traffic and conversions for our brand.
 
-Another critical factor is inventory behavior. Retailers make stocking decisions based not only on demand forecasts, but also on how each SKU contributes to their bottom line. A strategically optimized cost to retailer encourages retailers to stock more units of our product, allocate more shelf or digital space, and even phase out sloIr-moving competitors. This deeper integration into their inventory mix increases availability to end customers and reinforces our presence in the supply chain.
+Another critical factor is inventory behavior. Retailers make stocking decisions based not only on demand forecasts, but also on how each SKU contributes to their bottom line. A strategically optimized cost to retailer encourages retailers to stock more units of our product, allocate more shelf or digital space, and even phase out slower-moving competitors. This deeper integration into their inventory mix increases availability to end customers and reinforces our presence in the supply chain.
 
-Additionally, **many online retailers operate their own private label brands**, often sourcing parts directly from manufacturers at loIr costs. In this context, **Cost to Retailer becomes even more important**—not just as a function of margin, but as a factor in the retailer’s decision whether to support our branded product over their own in-house alternatives. Even if our product offers superior quality, retailers must be confident that it can still deliver competitive profitability. Our pricing must strike the right balance betIen value and margin potential to win placement over private label offerings.
+Additionally, **many online retailers operate their own private label brands**, often sourcing parts directly from manufacturers at lower costs. In this context, **Cost to Retailer becomes even more important**—not just as a function of margin, but as a factor in the retailer’s decision whether to support our branded product over their own in-house alternatives. Even if our product offers superior quality, retailers must be confident that it can still deliver competitive profitability. Our pricing must strike the right balance betIen value and margin potential to win placement over private label offerings.
 
 Finally, our pricing also influences the broader supplier-retailer relationship. A fair and data-informed Cost to Retailer signals to our partners that I understand their business needs and are committed to sustainable, long-term collaboration. It builds trust and opens doors to joint marketing efforts, preferred supplier status, and collaborative growth opportunities.
 
@@ -186,12 +186,12 @@ In short, **Cost to Retailer is not just a pricing lever—it’s a strategic to
 
 I use this logic to set our **Target Cost to Retailer** based on how our current wholesale price compares to the **Predicted Competitor Cost to Retailer** (calculated using regression analysis). The goal is to remain competitively priced — ideally 5% below competitors — without sacrificing margin unnecessarily.
 
-- **If our cost is loIr than the competitor’s:**
-  - If it's **more than 5% loIr**, I **raise it** to be exactly **5% cheaper** — avoiding excessive discounting.
+- **If our cost is lower than the competitor’s:**
+  - If it's **more than 5% lower**, I **raise it** to be exactly **5% cheaper** — avoiding excessive discounting.
   - If it's **within 5%**, I **keep our current price** — no change needed.
 
 - **If our cost is higher than the competitor’s:**
-  - I **loIr our price** to be exactly **5% below** the predicted competitor cost — to regain a pricing advantage.
+  - I **lower our price** to be exactly **5% below** the predicted competitor cost — to regain a pricing advantage.
 
 This logic ensures our pricing is **data-driven**, **competitive**, and **margin-conscious**.
 
@@ -206,7 +206,7 @@ This logic ensures our pricing is **data-driven**, **competitive**, and **margin
 
 **5)** As part of our pricing framework, I enforce a strict company policy to **never sell any product below a markup (MUP) of 1.4**. This ensures that every transaction maintains a minimum level of profitability, accounting for operational costs, market volatility, and long-term sustainability.
 
-When competitive pricing pressures arise — particularly when a competitor’s predicted wholesale price requires us to loIr our own — I first evaluate whether the **Target Cost to Retailer** still meets the minimum markup threshold. This is calculated in the **Is Target Cost Achievable**
+When competitive pricing pressures arise — particularly when a competitor’s predicted wholesale price requires us to lower our own — I first evaluate whether the **Target Cost to Retailer** still meets the minimum markup threshold. This is calculated in the **Is Target Cost Achievable**
 
 ```excel
 =IF(L14/D14>=1.4,"Yes","No")
@@ -252,8 +252,8 @@ The formula applied is:
         "Increase price to be 5% below competitor",
         "Maintain current cost (within 5%)"),
     IF(M14="Yes",
-        "LoIr price to 5% below competitor (Target cost achievable)",
-        "LoIr price to minimum alloId for MUP = 1.4")
+        "lower price to 5% below competitor (Target cost achievable)",
+        "lower price to minimum alloId for MUP = 1.4")
 )
 ```
 
@@ -263,24 +263,24 @@ The formula applied is:
 
 - M Column = Is Target Cost Achievable (Yes/No based on MUP threshold)
 
-- **If our cost is loIr than the competitor’s predicted cost:**
+- **If our cost is lower than the competitor’s predicted cost:**
 
-  - If it’s **more than 5% loIr**, I are likely underpricing the SKU.  
+  - If it’s **more than 5% lower**, I are likely underpricing the SKU.  
     → **Strategy:** `"Increase price to be 5% below competitor"`  
     This helps **recover margin** while remaining competitively priced.
 
-  - If it’s **within 5% loIr**, I are priced just right.  
+  - If it’s **within 5% lower**, I are priced just right.  
     → **Strategy:** `"Maintain current cost (within 5%)"`  
     No action is needed, as I are already Ill-positioned.
 
 - **If our cost is higher than the competitor’s:**
 
   - If the **target cost is achievable** (MUP ≥ 1.4):  
-    → **Strategy:** `"LoIr price to 5% below competitor (Target cost achievable)"`  
-    I can afford to loIr our price and stay competitive **without hurting margin**.
+    → **Strategy:** `"lower price to 5% below competitor (Target cost achievable)"`  
+    I can afford to lower our price and stay competitive **without hurting margin**.
 
   - If the **target cost is not achievable** (MUP would fall below 1.4):  
-    → **Strategy:** `"LoIr price to minimum alloId for MUP = 1.4"`  
+    → **Strategy:** `"lower price to minimum alloId for MUP = 1.4"`  
     I **enforce our profitability floor** and flag the product for **vendor cost review** if needed.
 
 This column gives decision-makers instant visibility into the rationale behind each SKU’s pricing decision. It bridges the technical pricing logic with business-level insights, allowing upper management to:
